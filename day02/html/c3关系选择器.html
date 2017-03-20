@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>c3关系选择器</title>
+    <style>
+        /*.box+li{
+            background-color: red;
+        }*/
+        .box~li{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+后代选择器   ul li  选择所有的后代元素
+子代选择器   ul > li 选择ul的儿子
+紧邻选择器  .box + li 选择.box后面的一个li元素
+兄弟选择器  .box ~ li 选择.box后面所有的li元素
+-->
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li class="box">5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li>10</li>
+</ul>
+</body>
+</html>

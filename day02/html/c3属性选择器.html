@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*E[属性名] ： 选择所有的具备这个属性的E元素*/
+        /*li[index]{
+            background-color: red;
+        }*/
+
+        /*E[属性名~=值]：选择所有的包含这个‘属性 = 对应值’的E元素*/
+       /* li[class~=box1]{
+            background-color: red;
+        }*/
+
+        /*E[属性名^=值]：从头去匹配这个‘属性 = 对应值’的E元素*/
+       /* li[class^=box]{
+            background-color: red;
+        }*/
+
+        /*E[属性名$=值]：从尾去匹配这个‘属性 = 对应值’的E元素*/
+        /*li[class$=x1]{*/
+            /*background-color: red;*/
+        /*}*/
+        /*E[属性名*=值]： 从任意位置去匹配这个‘属性 = 对应值’的E元素*/
+        li[class*=box]{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li index="1">1</li>
+    <li>2</li>
+    <li>3</li>
+    <li class="boxsfdsfd">4</li>
+    <li class="fdsfdsbox box1">5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+    <li>9</li>
+    <li class="boxfdffds">10</li>
+</ul>
+</body>
+</html>
