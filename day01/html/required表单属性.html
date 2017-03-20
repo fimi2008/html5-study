@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var search = document.getElementById('bdsearch');
+            search.focus(); // 自动获取焦点
+
+            // 鼠标移动到input框自动选中文本
+            search.onmouseenter=function () {
+                search.select();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="1.php">
+        <input required="required" type="text" placeholder="请输入...">
+        <input type="text" autofocus id="bdsearch">百度一下<!--自动获取焦点-->
+        <br/>
+        <input type="email" required placeholder="请输入邮箱"/>
+        <br/>
+        <input type="url" required placeholder="请输入网址"/>
+        <br/>
+        <input type="date" required placeholder="请输入日期"/>
+        <br/>
+        <input type="month" required placeholder="请输入月份"/>
+        <br/>
+        <input type="time" required placeholder="请输入时间"/>
+        <br/>
+        <input type="week" required placeholder="请输入第几周"/>
+        <br/>
+        <input type="number" required placeholder="请输入数字"/>
+        <br/>
+        滑动菜单<input type="range" required/>
+        <br/>
+        搜索<input type="search" required/>
+        <br/>
+        颜色<input type="color" required/>
+        <br/>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var btns = document.getElementsByTagName('button');
+            var video = document.getElementsByTagName('video');
+            btns[0].onclick = function () {
+                // 开始播放
+                console.log('开始播放');
+                video[0].play();
+            };
+            btns[1].onclick =function () {
+                // 暂停播放
+                console.log('暂停播放');
+                video[0].pause();
+            };
+        }
+    </script>
+</head>
+<body>
+<button>播放</button>
+<button>暂停</button>
+<!--
+ autoplay 自动播放
+ loop   循环播放
+ controls   播放控制器
+ -->
+<video>
+    <source src="../video/movie.webm">
+    <source src="../video/movie.mp4">
+    <source src="../video/movie.ogg">
+</video>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调色板</title>
+    <script type="text/javascript">
+        var color_1= 255,color_2= 255,color_3 = 255;
+        window.onload = function () {
+//            console.log(color_1, color_2, color_3);
+            var inputs = document.getElementsByTagName('input');
+            inputs[0].onchange= function () {
+                color_1 = this.value;
+//                console.log(color_1);
+                changeRGB();
+            };
+            inputs[1].onchange= function () {
+                color_2 = this.value;
+//                console.log(color_2);
+                changeRGB();
+            };
+            inputs[2].onchange= function () {
+                color_3 = this.value;
+//                console.log(color_3);
+                changeRGB();
+            };
+        };
+        function changeRGB(){
+            document.body.style.backgroundColor='rgb('+color_1+','+color_2+','+color_3+')';
+        }
+    </script>
+</head>
+<body>
+红色:<input type="range" min="0" max="255" value="255">
+<br/>
+<br/>
+绿色:<input type="range" min="0" max="255" value="255">
+<br/>
+<br/>
+蓝色:<input type="range" min="0" max="255" value="255">
+<br/>
+<br/>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>360音乐导航</title>
+    <style>
+        *{margin: 0; padding: 0; list-style: none}
+        ul{
+            margin: 50px auto;
+            text-align: center;
+            border: 1px solid #000;
+            overflow: hidden;
+            width:695px;
+            height:40px;
+        }
+        ul li{
+            float: left;
+            position:relative;
+            border-right: 1px dotted #5f5f5f;
+        }
+        li.last_li{
+            border-right: none;
+        }
+        ul li ins{
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:40px;
+            left: 0;
+        }
+        ul li a{
+            z-index: 1;
+            position: relative;
+            float: left;
+            outline: none;
+            width: 80px;
+            line-height: 40px;
+            height:40px;
+            text-decoration: none;
+            color: #333;
+        }
+        ul li a.audio_btn{
+            color: #4f4f4f;
+            width: 45px;
+            line-height: 40px;
+            height:40px;
+        }
+    </style>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script>
+        var colors = ['red','green','blue','pink','yellow','orange','black','purple'];
+        var audio_flag = false; // 是否静音
+        var $audio,$li,$ins;
+        $(function () {
+            $li = $('ul li');
+            $audio = $('audio');
+            // 给新建好的节点追加到每一个li元素里面
+            $li.append($('<ins></ins>'));
+            $ins =$('ul li ins');
+            $ins.each(function (index) {
+//                console.log(index);
+                // 遍历到哪一个ins就给这个ins添加对应的颜色
+                $(this).css('background-color',colors[index]);
+            });
+            // 移入到对应的li的元素里面让这个li元素的ins动画
+            $li.hover(function () {
+                // 获取当前用户正在操作的那个li的下标
+               /* var index = $(this).index();
+                if (index > 7 || audio_flag){
+                    return;
+                }
+//                console.log(index);
+//                console.log($ins[index]);
+                var oo = $ins.get(index);
+                $(oo).stop().animate({'top':0},400);
+                // 重新加载音频
+                $audio.get(index).load();
+                $audio.get(index).play();*/
+               audio_up(this);
+            },function () {
+              /*  var index = $(this).index();
+                if (index > 7 || audio_flag){
+                    return;
+                }
+                var oo = $ins.get(index);
+                $(oo).stop().animate({'top':40},400);*/
+                audio_down(this);
+            });
+            var audioBtn = $('.audio_btn');
+            audioBtn.click(function () {
+                if (audio_flag){
+                    audioBtn.html('静音');
+                    setTimeout(audio_start, 500);
+                    setTimeout(audio_stop, 900);
+                }else{
+                    audioBtn.html('开启');
+                }
+                audio_flag = !audio_flag;
+            });
+        });
+
+        var $index = 0;
+        function audio_start() {
+            console.log('$index:',$index);
+            if ($index > 7){
+                $index = 0;
+                return;
+            }
+            audio_up($li.get($index));
+            $index++;
+            setTimeout(audio_start, 500);
+        }
+        var $stop_index = 0;
+        function audio_stop(){
+            console.log('$stop_index:',$stop_index);
+            if ($stop_index > 7){
+                $stop_index = 0;
+                return;
+            }
+            audio_down($li.get($stop_index));
+            $stop_index++;
+            setTimeout(audio_stop, 500);
+        }
+
+        function audio_up(data){
+            // 获取当前用户正在操作的那个li的下标
+            var index = $(data).index();
+            console.log('up_index:', index)
+            if (index > 7 || audio_flag){
+                return;
+            }
+//                console.log(index);
+//                console.log($ins[index]);
+            var oo = $ins.get(index);
+            $(oo).stop().animate({'top':0},400);
+            // 重新加载音频
+            $audio.get(index).load();
+            $audio.get(index).play();
+        }
+
+        function audio_down(data){
+            var index = $(data).index();
+            if (index > 7 || audio_flag){
+                return;
+            }
+            var oo = $ins.get(index);
+            $(oo).stop().animate({'top':40},400);
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="#">新闻头条</a></li>
+        <li><a href="#">电视剧</a></li>
+        <li><a href="#">最新电影</a></li>
+        <li><a href="#">小游戏</a></li>
+        <li><a href="#">小说大全</a></li>
+        <li><a href="#">旅游度假</a></li>
+        <li><a href="#">网上购物</a></li>
+        <li><a href="#">娱乐八卦</a></li>
+        <li class="last_li"><a href="#" class="audio_btn">静音</a></li>
+    </ul>
+    <div class="musicWrap">
+        <audio src="../music/a1.mp3"></audio>
+        <audio src="../music/a2.mp3"></audio>
+        <audio src="../music/a3.mp3"></audio>
+        <audio src="../music/a4.mp3"></audio>
+        <audio src="../music/a5.mp3"></audio>
+        <audio src="../music/a6.mp3"></audio>
+        <audio src="../music/a7.mp3"></audio>
+        <audio src="../music/a8.mp3"></audio>
+    </div>
+</body>
+</html>
