@@ -90,16 +90,35 @@
             audioBtn.click(function () {
                 if (audio_flag){
                     audioBtn.html('静音');
-                    setTimeout(audio_start, 500);
-                    setTimeout(audio_stop, 900);
+                   /* setTimeout(audio_start, 500);
+                    setTimeout(audio_stop, 900);*/
+                    setTimeout(audio_open, 400);
                 }else{
                     audioBtn.html('开启');
                 }
                 audio_flag = !audio_flag;
             });
+
+            // 按键绑定音乐
+            $(window).keydown(function (event) {
+                var code = event.keyCode;
+                console.log('code:',code);
+                /**
+                 * 数字键1-8的code为49到56
+                 * */
+                var index = code - 49;
+                // trigger() 参数:事件类型 作用:让电脑帮我们去触发事件
+                $li.eq(index).trigger('mouseenter');
+
+                setTimeout(function () {
+                    audio_down($li.eq(index));
+                }, 400);
+            });
         });
 
-        var $index = 0;
+       /*
+       // 蠢方法,使用定时器模拟电脑触发
+       var $index = 0;
         function audio_start() {
             console.log('$index:',$index);
             if ($index > 7){
@@ -120,6 +139,23 @@
             audio_down($li.get($stop_index));
             $stop_index++;
             setTimeout(audio_stop, 500);
+        }*/
+
+        var $index = 0;
+        function audio_open() {
+            console.log('$index:',$index);
+            if ($index > 7){
+                $index = 0;
+                return;
+            }
+            // trigger() 参数:事件类型 作用:让电脑帮我们去触发事件
+            $li.eq($index).trigger('mouseenter');
+
+            setTimeout(function () {
+                audio_down($li.eq($index));
+                $index++;
+                audio_open();
+            }, 400);
         }
 
         function audio_up(data){
