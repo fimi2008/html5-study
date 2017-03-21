@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子內减</title>
+    <style>
+        div{
+            height: 200px;
+            width: 200px;
+            background-color: green;
+            margin: 10px auto;
+        }
+        div:nth-child(2){
+            padding: 10px;
+        }
+        div:nth-child(3){
+            padding: 10px;
+            border: 20px solid #cccccc;
+        }
+        div:nth-child(4){
+            padding: 10px;
+            border: 20px solid #cccccc;
+            width: 140px;
+            height:140px;
+        }
+        /**
+        box-sizing: border-box;
+        */
+        div:nth-child(5){
+            padding: 10px;
+            border: 20px solid #cccccc;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+<div>sdgsabcxcz</div>
+<div>sdgsabcxcz</div>
+<div>sdgsabcxcz</div>
+<div>sdgsabcxcz</div>
+<div>sdgsabcxcz</div>
+<div>sdgsabcxcz</div>
+</body>
+</html>
