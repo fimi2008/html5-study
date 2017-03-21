@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <title>过渡transition</title>
     <style>
+        /*
+        transition：值
+        值说明：
+        （1）那个属性需要过渡就写什么属性 可以用all来代替全部 （必写）
+        （2）过渡持续的时间，单位可以s或者是ms （必写）
+
+        css3定义动画新策略：css3的底层是c++，而JQ的animate是用定时器来完成的，
+        所以说css3的运行效率会比animate高出很多，所以但凡是一些不是功能性的动画，
+        不需要保证兼容的时候，一律推荐大家用css3去实现
+        小细节：display和渐变是不能直接产生过渡的 ...
+        */
         .box{
             width: 300px;
             height: 300px;
@@ -40,6 +51,16 @@
         .cup_scale:hover img {
             transform: scale(1.2);
         }
+        .opacity_box{
+            width:200px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: green;
+            transition: all 2s;
+        }
+        .opacity_box:hover{
+            opacity: 0;
+        }
     </style>
 </head>
 <body>
@@ -50,5 +71,6 @@
     <div class="cup_scale">
         <img src="../images/pic.png" height="100" width="100" alt="">
     </div>
+    <div class="opacity_box"></div>
 </body>
 </html>
