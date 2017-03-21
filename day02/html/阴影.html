@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>阴影</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            margin: 30px auto;
+            text-align: center;
+        }
+        div span{
+            color: #fff;
+        }
+
+        /*
+         值说明：
+        （1）第一个值 ：Npx  阴影向水平方向偏移N个像素  正数往右 负数往左
+        （2）第二个值 ：Npx  阴影向垂直方向偏移N个像素  正数往下 负数往上
+        （3）第三个值 ：羽化大小
+        （4）第四个值 ：阴影尺寸
+        （5）第五个值 ：颜色 默认值是黑色
+        （6）第六个参数： 内外阴影 默认是外阴影 内阴影是inset
+        （7）阴影可以写多个，中间用逗号隔开
+        */
+        div:first-child {
+            box-shadow: 2px 2px;
+        }
+
+        div:nth-child(2) {
+            box-shadow: 0 0 10px;
+        }
+
+        div:nth-child(3) {
+            box-shadow:0 0 30px 10px;
+        }
+
+        div:nth-child(4) {
+            box-shadow:0 0 30px 10px rgba(56,46,255,0.5);
+        }
+
+        div:nth-child(5) {
+            background:none;
+            box-shadow:0 0 30px 10px rgba(56,46,255,0.5) inset;
+        }
+        div:nth-child(5) span{
+            color: #000;
+        }
+        div:nth-child(6){
+            background:none;
+            box-shadow:0 0 30px 10px red,0 0 30px 30px green,0 0 60px 30px blue,0 0 30px 30px green inset;
+        }
+        div:nth-child(6) span{
+            color: #000;
+        }
+        div:last-child{
+            transition: all 2s;
+        }
+        div:last-child:hover{
+            background:none;
+            box-shadow:0 0 30px 10px red,0 0 30px 30px green,0 0 60px 30px blue,0 0 30px 30px green inset;
+        }
+    </style>
+</head>
+<body>
+<div class="box"><span>box-shadow: 2px 2px;</span></div>
+<div class="box"><span>box-shadow: 0 0 10px;</span></div>
+<div class="box"><span>box-shadow:0 0 30px 10px;</span></div>
+<div class="box"><span>box-shadow:0 0 30px 10px rgba(56,46,255,0.5);</span></div>
+<div class="box"><span> background:none;
+            box-shadow:0 0 30px 10px rgba(56,46,255,0.5) inset;</span></div>
+<div class="box"><span>background:none;
+            box-shadow:0 0 30px 10px red,0 0 30px 30px green,0 0 60px 30px blue,0 0 30px 30px green inset;</span></div>
+<div class="box"><span> transition: all 2s;
+ background:none;
+            box-shadow:0 0 30px 10px red,0 0 30px 30px green,0 0 60px 30px blue,0 0 30px 30px green inset;</span></div>
+</body>
+</html>
