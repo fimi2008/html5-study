@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框图片</title>
+    <style>
+        /*
+        语法：border-image：值
+        值说明：
+        （1）border-image-source:url('border.png'); 图片路径
+        （2）border-image-slice:26;图片切割，不要带单位，遵从九宫格式切图法（上下左右各来一刀）
+        （3）border-image-repeat:round或者stretch或者repeat; round没有瑕疵，stretch默认拉伸，repeat 平铺（可能有瑕疵）
+        （4）简写：border-image:url('border.png') 26 round;
+        */
+        .box{
+            width:200px;
+            height:200px;
+            border: 60px solid #000;
+            margin:100px auto;
+            /* border-image-source:url('border.png');
+            border-image-slice:26;
+            border-image-repeat:stretch; */
+            border-image:url('../images/border.png') 26 round;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
