@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字阴影</title>
+    <style>
+        body{
+            background-color: #ccc;
+        }
+        /**
+        语法： text-shadow：水平偏移 垂直偏移 羽化大小 颜色
+        */
+        div{
+            font-size:100px;
+            font-family:'微软雅黑';
+            font-weight:bold;
+            color:#ccc;
+             /*text-shadow: 10px 10px 10px red;*/
+            text-shadow: -1px -1px #fff,1px 1px #000;
+        }
+        div:nth-child(2){
+            text-shadow: 1px 1px #fff,-1px -1px #000;
+        }
+    </style>
+</head>
+<body>
+<div>文本文本文本第一处</div>
+<div>文本文本文本第二处</div>
+</body>
+</html>
