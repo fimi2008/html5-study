@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D转换-移动</title>
+    <style>
+        /*
+         transform：translate（）
+        参数说明：
+        （1）只有一个值的情况下，表示水平方向运动，正值向右，负值向左，也可以接受百分比，百分比参照的是自身的宽，高
+        （2）两个值分别控制水平和垂直
+        （3）移动不会影响其他的元素，类似于相对定位
+
+        */
+        div{
+            height: 300px;
+            width:300px;
+            background-color: green;
+        }
+        div:first-child{
+            background-color: pink;
+            transform: translate(20px,20px);
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+</body>
+</html>

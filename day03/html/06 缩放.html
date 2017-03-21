@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>缩放</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            border: 5px solid green;
+            background-color: red;
+            transition: all 1s;
+        }
+        /*
+        transform：scale（）
+        参数说明：
+        （1）没有单位，接受数值和小数
+        （2）只有一个值的情况，整体缩放（等比例）
+        （3）两个值的情况，宽度和高度分别缩放（可能会变形）
+        （4）边框也是会缩放的，并且如果想要一个方向缩放，另外一个方向需要写一个1
+        */
+        div:hover{
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
