@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*
+        作用：渲染一个不存在的标签插入到当前元素的内部的前面或者后面
+	总结：
+	（1）伪元素默认是行内元素，我们可以进行转化，在实际工作中，多用来模拟一些小的标签去装饰
+   （2）因为伪元素是不存在的，所以不能直接用JS去获取
+	（3）清除浮动的底层原理：就是让一个伪元素（因为伪元素不占dom内存）去清除浮动，从而节约了dom内存。
+	（4）text-indent针对伪类不起作用
+	（5）当伪类需要配合iconfont去使用的话需要打开iconfont.css 拿到content里面对应的值
+	（6）当伪元素需要hover的效果的时候不能直接hover 需要借助于父级 写法：父级：hover：伪元素
+        */
+        div:before{
+            content:'哥哥';
+            display: block;
+            width: 100px;
+            height: 100px;
+            border: 1px solid #000;
+        }
+        div:after{
+            content: '30岁';
+        }
+    </style>
+</head>
+<body>
+<div>的年纪</div>
+</body>
+</html>

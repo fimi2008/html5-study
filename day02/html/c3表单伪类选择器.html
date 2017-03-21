@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>c3表单伪类选择器</title>
+    <style>
+        /*input:focus{}      选择获取焦点的表单*/
+        input:focus{
+            border:3px solid orange;
+            outline:none;
+        }
+        /*input:enabled{}   选择可操控的表单元素*/
+        input:enabled{
+            background-color: red;
+        }
+        /*input:disabled{}   选择不可操控的表单*/
+        input:disabled{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<input type="text">
+<br>
+<br>
+<input type="text" disabled>
+<br>
+<br>
+<input type="text">
+</body>
+</html>
