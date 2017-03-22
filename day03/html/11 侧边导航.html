@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边导航</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            position: fixed;
+            right: 0;
+            width: 60px;
+            height: 300px;
+            top:50%;
+            transform: translateY(-50%);
+        }
+        ul li{
+            width: 60px;
+            height: 20%;
+            text-align: center;
+            position: relative;
+            line-height: 60px;
+        }
+        ul li a{
+            display: block;
+            height: 100%;
+            text-decoration: none;
+            color: #fff;
+            background-color: skyblue;
+            position: relative;
+        }
+        ul li:before{
+            content: '点击我';
+            width: 150px;
+            height: 100%;
+            background-color: pink;
+            position: absolute;
+            top:0;
+            right:-90px;
+            transition: all .5s;
+        }
+        ul li:hover:before{
+            right: 60px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="javascript:;">导航1</a></li>
+        <li><a href="javascript:;">导航2</a></li>
+        <li><a href="javascript:;">导航3</a></li>
+        <li><a href="javascript:;">导航4</a></li>
+        <li><a href="javascript:;">导航5</a></li>
+    </ul>
+</body>
+</html>

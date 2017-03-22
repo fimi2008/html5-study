@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>滑动到对应位置加载css3</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        img{
+            position: fixed;
+            left:-50%;
+            top:50%;
+            transform: translate(-50%,-50%) rotate(0deg);
+            transition: all 3s;
+        }
+        img.current{
+            left:50%;
+            transform: translate(-50%,-50%) rotate(1080deg);
+        }
+    </style>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function () {
+            $(window).scroll(function () {
+                // 动态获取页面被卷曲的高
+                var scroll = $(window).scrollTop();
+
+                if (scroll > 1000){
+                    $('img').addClass('current');
+                }else{
+                    $('img').removeClass('current');
+                }
+            })
+        });
+    </script>
+</head>
+<body>
+    <img src="../images/guniang.jpg" width="330" height="475">
+</body>
+</html>
