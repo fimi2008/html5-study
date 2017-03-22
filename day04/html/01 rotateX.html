@@ -5,6 +5,7 @@
     <title>rotateX</title>
     <style>
         body{
+            /*没有透视的3D是看不出来的*/
             perspective: 900px;
         }
         div{
@@ -19,6 +20,7 @@
             background-color: green;
         }
         .box1:hover{
+            /*正值表示推到，负值表示鞠躬*/
             transform: rotateX(45deg);
         }
         .box2{

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rotateY</title>
+    <style>
+        body{
+            perspective: 900px;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            background-color: skyblue;
+            transition: all 1s;
+        }
+        .box:hover{
+            /* 围绕着Y轴进行旋转 正数是逆时针，负数是顺时针*/
+            transform: rotateY(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
