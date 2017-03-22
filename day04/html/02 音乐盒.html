@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音乐盒</title>
+    <style>
+        .music_box {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            position: relative;
+            border: 1px solid #000;
+            border-radius: 50%;
+            perspective: 900px;
+        }
+        .music_box div {
+            width: 100%;
+            height: 100%;;
+            position: absolute;
+            left: 0;
+            top: 0;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        .son1 {
+            background: #fff url("../images/musicb.jpg") 0 0 no-repeat;
+            transition-duration: 10000s;/*动画10000s*/
+            transition-timing-function: linear;/*匀速动画*/
+        }
+        .son2 {
+            background: #fff url("../images/musict.jpg") 0 0 no-repeat;
+            transform-origin: bottom;
+            transition: all 1s;
+        }
+        .music_box:hover .son2{
+            transform: rotateX(-180deg);
+        }
+        .music_box:hover .son1{
+            transform: rotateZ(720000deg);
+        }
+    </style>
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script>
+      $(function () {
+          var music = document.getElementById("music");
+         $('.music_box').hover(function () {
+             music.load();
+             music.play();
+         },function () {
+             music.pause();
+         });
+      });
+    </script>
+</head>
+<body>
+<div class="music_box">
+    <div class="son1"></div>
+    <div class="son2"></div>
+</div>
+<div>
+    <audio id="music" src="../music/BIRTHDAY.WAV" loop></audio>
+</div>
+</body>
+</html>

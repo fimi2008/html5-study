@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rotateX</title>
+    <style>
+        body{
+            perspective: 900px;
+        }
+        div{
+            width: 200px;
+            height: 200px;
+            transition: all 1s;
+            margin: 100px auto;
+            /*旋转基点*/
+            transform-origin: bottom;
+        }
+        .box1{
+            background-color: green;
+        }
+        .box1:hover{
+            transform: rotateX(45deg);
+        }
+        .box2{
+            background-color: pink;
+        }
+        .box2:hover{
+            transform: rotateX(-45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
