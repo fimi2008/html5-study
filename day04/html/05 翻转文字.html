@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>翻转文字</title>
+    <style>
+        div{
+            width: 1000px;
+            margin: 10px auto;
+        }
+        div span{
+            font-size: 8em;
+            font-family: 微软雅黑;
+            font-weight: 700;
+            letter-spacing: 20px;
+            position: relative;
+        }
+        div span:before,div span:after{
+            content: attr(data-content);
+            position: absolute;
+            left:0;
+            top:0;
+            transition: all 1s;
+            transform-origin: left;
+        }
+        div span:before{
+            color: rgba(0,0,0,.5);
+        }
+        div span:after{
+            color: #eee;
+        }
+        div span:hover:after{
+            transform: rotateY(-30deg) skewY(10deg);
+        }
+        div span:hover:before{
+            transform: rotateY(-45deg) skewY(25deg) scaleX(1.5);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span data-content="H">H</span>
+        <span data-content="E">E</span>
+        <span data-content="L">L</span>
+        <span data-content="L">L</span>
+        <span data-content="O">O</span>
+    </div>
+</body>
+</html>
