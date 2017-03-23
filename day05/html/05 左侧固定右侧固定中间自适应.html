@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧固定右侧固定中间自适应</title>
+    <style>
+
+        .box{
+            width: 80%;
+            height: 500px;
+            margin: 100px auto;
+            border: 1px solid #000;
+        }
+        .left{
+            float: left;
+            width: 100px;
+            height: 100%;
+            background-color: green;
+        }
+        /*
+        只要涉及到右侧固定的，我们都需要让浮动流的盒子在DOM结构里面在标准流的前面（先浮动，后标准）
+        结构如果不能变的 情况下，让三个盒子全部浮动，利用margin-left负值实现这个效果
+        */
+        .center{
+            height: 100%;
+            background-color: red;
+            margin:0 110px;
+        }
+        .right{
+            float: right;
+            width: 100px;
+            height: 100%;
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="center"></div>
+    </div>
+</body>
+</html>
