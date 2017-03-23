@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>中间固定 两边自适应</title>
+    <style>
+        .box{
+            width: 80%;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            position: relative;
+        }
+        /*
+        中间固定  两边自适应 ：核心　：中间的盒子定位，然后左右盒子分别各占５０％，然后内减去中间的盒子宽度的一半。
+        */
+        .center{
+            width: 100px;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            margin-left: -50px;
+            background-color: red;
+        }
+        .left{
+            background-color: gold;
+            position: absolute;
+            left: 0;
+            right: 50%;
+            margin-right: 50px;
+            height: 100%;
+        }
+        .right{
+            background-color: gold;
+            position: absolute;
+            left: 50%;
+            right: 0;
+            margin-left: 50px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="right"></div>
+        <div class="left"></div>
+        <div class="center"></div>
+    </div>
+</body>
+</html>
