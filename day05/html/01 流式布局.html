@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>流式布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        ul{
+            width: 80%;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            padding-left: 10px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        ul li{
+            width: 33.333333%;
+            height: 100%;
+            float: left;
+            padding-right: 10px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        ul li div{
+            width: 100%;
+            height: 100%;
+            border: 1px solid #000;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+        }
+        li:nth-child(1) div{
+            background-color: red;
+        }
+        li:nth-child(2) div{
+            background-color: green;
+        }
+        li:nth-child(3) div{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><div></div></li>
+        <li><div></div></li>
+        <li><div></div></li>
+    </ul>
+</body>
+</html>

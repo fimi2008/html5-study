@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+        ul{
+            width: 80%;
+            height: 400px;
+            margin: 100px auto;
+            border: 1px solid #000;
+            display: box;/* 针对老式的webikt*/
+            display: -webkit-box;/* 针对老式的webikt*/
+            display: flex;/* 针对最新的webikt*/
+            display: -webkit-flex;
+        }
+        ul li{
+            height: 100%;
+            box-flex: 1;/* 针对老式的webikt*/
+            -webkit-box-flex: 1;/* 针对老式的webikt*/
+            flex:1;/* 针对最新的webikt*/
+            -webkit-flex:1;
+        }
+        ul li:nth-child(1){
+            background-color: red;
+            box-flex:2;
+            -webkit-box-flex: 2;
+            flex:2;
+            -webkit-flex: 2;
+        }
+        ul li:nth-child(2){
+            background-color: green;
+        }
+        ul li:nth-child(3){
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+</body>
+</html>
