@@ -1,4 +1,8 @@
 @charset "utf-8";
+body {
+    background-color: #f2f2f2;
+}
+
 header {
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
@@ -16,7 +20,7 @@ header {
     color: #37aee1;
 }
 
-.user:before, .xc_search_in:before {
+.user:before, .xc_search_in:before, .nav li:nth-child(5n+1):after {
     content: '';
     background: url("../images/icons/un_ico_home_v66.png") 0 0 no-repeat;
     background-size: 104px 328px; /*缩放背景图*/
@@ -122,17 +126,17 @@ header {
 }
 
 /*nav样式start*/
-.nav{
-    margin:4px;
-    font-size: 15px;
+.nav {
+    margin: 4px;
     padding-left: 104px;
     position: relative;
 }
-.nav li{
+
+.nav li {
     height: 45px;
     width: 50%;
     border-left: 1px solid #ffffff;
-    border-bottom:1px solid #ffffff;
+    border-bottom: 1px solid #ffffff;
     float: left;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -140,10 +144,12 @@ header {
     line-height: 45px;
     text-align: center;
 }
-.nav li:nth-child(5n),.nav li:nth-child(5n+4){
+
+.nav li:nth-child(5n), .nav li:nth-child(5n+4) {
     margin-bottom: 4px;
 }
-.nav li:nth-child(5n+1){
+
+.nav li:nth-child(5n+1) {
     position: absolute;
     left: 0;
     top: 0;
@@ -151,22 +157,152 @@ header {
     width: 104px;
     border-radius: 5px 0 0 5px;
 }
-.nav li:nth-child(5n+3){
+
+.nav li:nth-child(5n+1):after {
+    position: absolute;
+    width: 40px;
+    height: 33px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    -webkit-transform: translate(-50%, -10%);
+    background-position: 0 -130px;
+}
+
+.nav li:nth-child(5n+3) {
     border-top-right-radius: 5px;
 }
-.nav li:nth-child(5n){
+
+.nav li:nth-child(5n) {
     border-bottom-right-radius: 5px;
 }
-.nav li:nth-child(6){
-    top:94px;
+
+.nav li:nth-child(6) {
+    top: 94px;
 }
-.nav li:nth-child(11){
-    top:188px;
+
+.nav li:nth-child(6):after {
+    width: 42px;
+    height: 24px;
+    background-position: -51px -122px;
 }
-.nav li:nth-child(16){
-    top:282px;
+
+.nav li:nth-child(5) ~ li {
+    background-color: #3d98ff;
 }
-.nav li a{
+
+.nav li:nth-child(11) {
+    top: 188px;
+}
+
+.nav li:nth-child(11):after {
+    width: 35px;
+    height: 41px;
+    background-position: 0 -181px;
+}
+
+.nav li:nth-child(10) ~ li {
+    background-color: #44c522;
+}
+
+.nav li:nth-child(16) {
+    top: 282px;
+}
+
+.nav li:nth-child(16):after {
+    width: 36px;
+    height: 31px;
+    background-position: 0 -240px;
+}
+
+.nav li:nth-child(15) ~ li {
+    background-color: #fc9720;
+}
+
+.nav li a {
     color: #ffffff;
+    font-size: 15px;
+    text-shadow: 0 2px 1px rgba(0, 0, 0, .2);
+    letter-spacing: 1px;
 }
+
 /*nav样式end*/
+
+/*sub_nav 样式开始*/
+.sub_nav {
+    margin: 4px;
+    border-radius: 5px;
+}
+
+.sub_nav li {
+    width: 25%;
+    height: 68px;
+    float: left;
+    text-align: center;
+    margin-bottom: 1px;
+}
+
+.sub_nav li a {
+    line-height: 100px;
+    height: 68px;
+    margin-right: 1px;
+    display: block;
+    background-color: #ffffff;
+    color: #000000;
+    position: relative;
+}
+.sub_nav li:nth-child(1) a {
+    border-top-left-radius: 5px;
+}
+.sub_nav li:nth-child(4) a{
+    border-top-right-radius: 5px;
+}
+.sub_nav li:nth-child(5) a{
+    border-bottom-left-radius: 5px;
+}
+.sub_nav li:nth-child(8) a{
+    border-bottom-right-radius: 5px;
+}
+
+.sub_nav li a:before {
+    content: '';
+    background: url("../images/icons/un_ico_subnav.png") 0 0 no-repeat;
+    background-size: 26px 235px; /*缩放背景图*/
+    -webkit-background-size: 26px 235px;
+    position: absolute;
+    width: 26px;
+    height: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    top: 10px;
+}
+
+.sub_nav li:nth-child(2) a:before {
+    background-position: 0 -30px;
+}
+
+.sub_nav li:nth-child(3) a:before {
+    background-position: 0 -60px;
+}
+
+.sub_nav li:nth-child(4) a:before {
+    background-position: 0 -90px;
+}
+
+.sub_nav li:nth-child(5) a:before {
+    background-position: 0 -120px;
+}
+
+.sub_nav li:nth-child(6) a:before {
+    background-position: 0 -150px;
+}
+
+.sub_nav li:nth-child(7) a:before {
+    background-position: 0 -180px;
+}
+
+.sub_nav li:nth-child(8) a:before {
+    background-position: 0 -210px;
+}
+/*sub_nav 样式结束*/
