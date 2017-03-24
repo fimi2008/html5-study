@@ -7,6 +7,8 @@
     <title>携程网</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/index.css">
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/TouchSlide.1.1.js"></script>
 </head>
 <body>
     <header class="clearfix">
@@ -15,5 +17,53 @@
             <div class="xc_search_in">搜索:目的地/酒店/景点/航班号</div>
         </div>
     </header>
+    <!-- 本例主要代码 Start ================================ -->
+    <div id="focus" class="focus">
+        <div class="hd">
+            <ul></ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li><a href="#"><img src="../images/img/1.jpg" /></a></li>
+                <li><a href="#"><img src="../images/img/2.jpg" /></a></li>
+                <li><a href="#"><img src="../images/img/3.jpg" /></a></li>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+        TouchSlide({
+            slideCell:"#focus",
+            titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+            mainCell:".bd ul",
+            effect:"leftLoop",
+            autoPlay:true,//自动播放
+            autoPage:true //自动分页
+        });
+    </script>
+    <!-- 本例主要代码 End ================================ -->
+    <nav>
+        <ul class="nav">
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+            <li><a href="javascript:;">主题酒店</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
