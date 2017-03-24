@@ -1,0 +1,56 @@
+@charset "utf-8";
+header{
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+.user{
+    width: 47px;
+    height: 40px;
+    float: right;
+    display: block;
+    position: relative;
+    text-align: center;
+    line-height: 67px;
+    letter-spacing: 2px;/*字间距*/
+    color: #37aee1;
+}
+.user:before,.xc_search_in:before{
+    content: '';
+    background: url("../images/icons/un_ico_home_v66.png") 0 0 no-repeat;
+    background-size: 104px 328px;/*缩放背景图*/
+    -webkit-background-size: 104px 328px;
+}
+.user:before{
+    width: 23px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    background-position:-59px -194px;
+    top:4px;
+}
+.xc_search{
+    margin-right: 47px;
+    height: 40px;
+    padding: 7px 0 0 8px;
+}
+.xc_search_in{
+    border: 1px solid #999999;
+    border-radius: 5px;
+    height: 24px;
+    line-height: 22px;
+    text-indent: 25px;
+    box-shadow: 0 2px 2px rgba(0,0,0,.2);
+    position: relative;
+}
+.xc_search_in:before{
+    width: 13px;
+    height: 14px;
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    background-position: -60px -280px;
+}
