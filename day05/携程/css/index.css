@@ -20,7 +20,7 @@ header {
     color: #37aee1;
 }
 
-.user:before, .xc_search_in:before, .nav li:nth-child(5n+1):after {
+.user:before, .xc_search_in:before, .nav li:nth-child(5n+1):after,.tool_cn a:before {
     content: '';
     background: url("../images/icons/un_ico_home_v66.png") 0 0 no-repeat;
     background-size: 104px 328px; /*缩放背景图*/
@@ -356,7 +356,7 @@ header {
     -webkit-transform: translateY(-65%) rotate(-45deg);
 }
 .pro_tmh_info{
-    padding: 0 10px;
+    padding: 0 10px 10px 10px;
 }
 .pro_tmh_info li{
     width: 50%;
@@ -380,9 +380,9 @@ header {
     background-color: #f2f2f2;
     padding-top:8px;
     padding-left:4px;
-    height: 100px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    height: 75px;
 }
 .tmh_pic img{
     position: absolute;
@@ -468,7 +468,7 @@ header {
 }
 .tmh_b .row{
     width: 50%;
-    height: 95px;
+    height: 96px;
     position: relative;
     text-align: center;
     box-sizing: border-box;
@@ -478,7 +478,9 @@ header {
 .tmh_b .row_in{
     padding-top: 10px;
     background-color: #f2f2f2;
-    height: 95px;
+    height: 96px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }
 .tmh_b .row:nth-child(1){
     padding-right: 2px;
@@ -519,3 +521,70 @@ header {
     float: right;
 }
 /*特卖汇样式结束*/
+
+/*热门活动样式开始*/
+.pro_hot_tit h2{
+    width: 73px;
+    height: 15px;
+    text-indent: -99999px;
+    background-position: 0 -19px;
+}
+.pro_hot_tit .tips{
+    background: -webkit-linear-gradient(left,#ffac3c,#ffd25b);
+    background: linear-gradient(left,#ffac3c,#ffd25b);
+}
+.pro_hot_info li{
+    float: left;
+    width: 50%;
+    height: 100%;
+}
+/*热门活动样式结束*/
+
+/*footer样式开始*/
+footer{
+    margin-top: 9px;
+}
+footer .tool_cn{
+    height: 50px;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.tool_cn a{
+    float: left;
+    height: 100%;
+    width: 33.333333%;
+    text-align: center;
+    line-height: 75px;
+    position: relative;
+    color: #333;
+}
+.tool_cn a:before{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    top: 8px;
+}
+.tool_cn a:nth-child(1):before{
+    background-position: -60px -154px;
+}
+.tool_cn a:nth-child(2):before{
+    background-position: -60px -174px;
+}
+.tool_cn a:nth-child(3):before{
+    background-position: -60px -310px;
+}
+.tool_ver{
+    text-align: center;
+}
+.tool_ver a{
+    color: #666;
+}
+footer p{
+    text-align: center;
+    color: #999;
+}
+/*footer样式结束*/
