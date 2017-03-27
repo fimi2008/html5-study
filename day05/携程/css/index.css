@@ -1,4 +1,10 @@
 @charset "utf-8";
+html{
+    min-width: 320px;
+    max-width: 640px;
+    width: 100%;
+    margin: 0 auto;
+}
 body {
     background-color: #f2f2f2;
 }
@@ -6,6 +12,13 @@ body {
 header {
     border-top: 1px solid #cccccc;
     border-bottom: 1px solid #cccccc;
+    position: fixed;
+    z-index: 99999;
+    background-color: #fff;
+    min-width: 320px;
+    max-width: 640px;
+    width: 100%;
+    top:0;
 }
 
 .user {
@@ -68,7 +81,7 @@ header {
 /* 本例子css -------------------------------------- */
 .focus {
     width: 100%;
-    margin: 0 auto;
+    margin: 40px auto 0;
     position: relative;
     overflow: hidden;
 }
