@@ -306,3 +306,216 @@ header {
     background-position: 0 -210px;
 }
 /*sub_nav 样式结束*/
+
+/*特卖汇样式开始*/
+.product {
+    margin-top: 8px;
+    overflow: hidden; /*解决margin合并*/
+    border-top: 1px solid #f2f2f2;
+    background-color: #ffffff;
+}
+.pro_tit{
+    height: 20px;
+    margin: 12px 0;
+    padding: 0 10px;
+    position: relative;
+}
+.pro_tit h2{
+    background: url("../images/icons/un_home_text.png") 0 0 no-repeat;
+    background-size: 79px 58px;
+    -webkit-background-size: 79px 58px;
+}
+.pro_tmh_tit h2{
+    width: 57px;
+    height: 15px;
+    text-indent: -99999px;
+}
+.product .tips{
+    width: 102px;
+    height: 21px;
+    position: absolute;
+    right: 10px;
+    top:0;
+    border-radius: 10px;
+    text-indent: 12px;
+    line-height: 21px;
+    background: -webkit-linear-gradient(left,#ff506b,#ff6bc6);
+    background: linear-gradient(left,#ff506b,#ff6bc6);
+    color: #ffffff;
+}
+.product .tips:after{
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    position: absolute;
+    top:50%;
+    right: 9px;
+    transform: translateY(-65%) rotate(-45deg);
+    -webkit-transform: translateY(-65%) rotate(-45deg);
+}
+.pro_tmh_info{
+    padding: 0 10px;
+}
+.pro_tmh_info li{
+    width: 50%;
+    height: 175px;
+    float: left;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pro_tmh_info li:nth-child(1){
+    padding-right: 2px;
+}
+.pro_tmh_info li:nth-child(2){
+    padding-left: 2px;
+}
+.tmh_pic{
+    position: relative;
+    height: 100px;
+}
+.tmh_pri_row{
+    background-color: #f2f2f2;
+    padding-top:8px;
+    padding-left:4px;
+    height: 100px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.tmh_pic img{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    height: 100%;
+}
+.tmh_pic:before{
+    content: '爆款';
+    width: 38px;
+    height: 20px;
+    background-color: #fd3a51;
+    position: absolute;
+    line-height: 20px;
+    text-align: center;
+    color: #ffffff;
+    z-index: 2;
+}
+.tmh_pic:after{
+    content: '';
+    border-width: 20px 8px;
+    border-style: solid;
+    border-color: #fd3a51 transparent transparent transparent;
+    position: absolute;
+    left: 30px;
+}
+.pro_tmh_info .tmh_txt{
+     -webkit-line-clamp: 2;
+    color: #222222;
+    font-size: 12px;
+}
+.tmh_pri{
+    color: #fd3a51;
+}
+.tmh_pri i:nth-child(1){
+    font-size: 10px;
+}
+.tmh_pri i:nth-child(2){
+    font-size: 18px;
+    font-weight: 400;
+}
+.tmh_pri i:nth-child(3){
+    font-size: 16px;
+}
+.tmh_pri span{
+    display: inline-block;
+    padding: 0 7px;
+    margin-left: 5px;
+    line-height: 1.2;
+    color: #ffffff;
+    border-radius: 7px;
+    background-color: #fd3a51;
+}
+.tmh_tj{
+    height: 75px;
+    position: relative;
+    padding: 13px 4px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background-color: #f2f2f2;
+}
+.tmh_tj img{
+    position: absolute;
+    width: 54px;
+    right: 0;
+    bottom: 0;
+}
+/*:nth-of-type(n) 选择器匹配属于父元素的特定类型的第 N 个子元素的每个元素.*/
+.tmh_tj p:nth-of-type(1){
+    font-size: 14px;
+    color: #fd3a51;
+    font-weight: 700;
+}
+.tmh_tj p:nth-of-type(2){
+    font-size: 11px;
+    color: #444444;
+    line-height: 1.8;
+}
+.tmh_b{
+    height: 100px;
+}
+.tmh_b .row{
+    width: 50%;
+    height: 95px;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-top: 4px;
+}
+.tmh_b .row_in{
+    padding-top: 10px;
+    background-color: #f2f2f2;
+    height: 95px;
+}
+.tmh_b .row:nth-child(1){
+    padding-right: 2px;
+}
+.tmh_b .row:nth-child(2){
+    padding-left: 2px;
+}
+.tmh_b .row img{
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    left:50%;
+    bottom: 4px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+.tmh_b .row h3{
+    font-size: 14px;
+    font-weight: 700;
+}
+.tmh_b .row p{
+    font-size: 11px;
+    color: #444444;
+}
+.tmh_b .row i{
+    line-height: 1.8;
+}
+.tmh_b .tmh_bl h3, .tmh_b .tmh_bl i{
+    color: #75b1ff;
+}
+.tmh_b .tmh_br h3, .tmh_b .tmh_br i{
+    color: #53ca72;
+}
+.tmh_b .tmh_bl{
+    float: left;
+}
+.tmh_b .tmh_br{
+    float: right;
+}
+/*特卖汇样式结束*/
