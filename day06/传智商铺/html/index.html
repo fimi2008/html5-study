@@ -5,6 +5,7 @@
     <title>传智商铺</title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/swiper.min.css">
     <script src="../js/rem.js" type="text/javascript"></script>
 </head>
 <body>
@@ -12,5 +13,65 @@
         <a class="back" href="javascript:;"></a>
         传智商铺
     </header>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="../images/img/banner.png" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="../images/img/banner.png" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="../images/img/banner.png" alt="">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a href="javascript:;">
+                    <img src="../images/img/banner.png" alt="">
+                </a>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="../js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container',{
+            pagination : '.swiper-pagination',
+            paginationClickable: true,
+            loop: true
+        });
+    </script>
+
+    <div class="user_warp clearfix">
+        <div class="user_l">
+            <a href="javascript:;"><img src="../images/img/user.png" alt=""></a>
+        </div>
+        <div class="user_r">
+            <p>快乐曲线养生旗舰店</p>
+            <p>商家好评率：<i>98%</i>     商家信用等级：<i>8</i></p>
+            <div class="user_bottom clearfix">
+                <a class="save_btn" href="javascript:;">收藏店铺</a>
+                <div class="tel_btn">
+                    联系商家
+                    <div class="icons clearfix">
+                        <a href="javascript:;" class="link"></a>
+                        <a href="javascript:;" class="qq"></a>
+                        <a href="javascript:;" class="taobao"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
