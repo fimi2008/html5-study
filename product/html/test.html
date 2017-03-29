@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>库存诊断</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>库存诊断</title>
+    <link rel="stylesheet" href="../css/base.css">
+    <!-- fullpage的核心css文件 -->
+    <link rel="stylesheet" href="../fullpage/jquery.fullPage.min.css">
+    <link rel="stylesheet" href="../css/test.css">
+    <!-- 引入JQ包，因为fullpage是依赖于JQ的 -->
+    <script src="../fullpage/jquery-1.11.3.min.js"></script>
+    <!-- jquery.easings.min.js 用于 easing 参数，也可以使用完整的 jQuery UI 代替，如果不需要设置 easing 参数，可去掉改文件 -->
+    <script src="../fullpage/jquery.easing.1.3.js"></script>
+    <!-- fullpage的核心js文件 -->
+    <script src="../fullpage/jquery.fullPage.min.js"></script>
+    <script type="text/javascript">
+        var scope = 0;
+        /*调用主要功能*/
+        $(function(){
+            $('#main').fullpage();
+            var $scope = $('#scope');
+
+            $('button').click(function () {
+                var v = $(this).attr('data-val');
+                scope = scope + Number(v);
+                $scope.html(scope);
+                $.fn.fullpage.moveSectionDown();
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- 核心主结构 -->
+    <div id="main">
+        <div class="section">
+            <div class="win">
+                <h2>库存诊断（测试版）</h2>
+                <p>为达到更好效果，只可提交一次，请如实填写</p>
+                <div class="question">
+                    问题：公司产品战略？
+                    <i>1/4</i>
+                </div>
+                <button data-val="1">没有考虑</button>
+                <button data-val="2">没有清晰的</button>
+                <button data-val="3">有，但未传达整个公司</button>
+                <button data-val="4">有，部分部门在运用</button>
+                <button data-val="5">明确的产品战略</button>
+            </div>
+        </div>
+        <div class="section">
+            <div class="win">
+                <h2>库存诊断（测试版）</h2>
+                <p>为达到更好效果，只可提交一次，请如实填写</p>
+                <div class="question">
+                    问题：销售预测准确性？
+                    <i>2/4</i>
+                </div>
+                <button data-val="1">没有指标</button>
+                <button data-val="2">0~50%</button>
+                <button data-val="3">50%~70%</button>
+                <button data-val="4">70%~90%</button>
+                <button data-val="5">90%~100%</button>
+            </div>
+        </div>
+        <div class="section">
+            <div class="win">
+                <h2>库存诊断（测试版）</h2>
+                <p>为达到更好效果，只可提交一次，请如实填写</p>
+                <div class="question">
+                    问题：计算月或周需求量使用如下方法？
+                    <i>3/4</i>
+                </div>
+                <button data-val="1">没有方法</button>
+                <button data-val="3">移动平均，回归分析等方法</button>
+            </div>
+        </div>
+        <div class="section">
+            <div class="win">
+                <h2>库存诊断（测试版）</h2>
+                <p>为达到更好效果，只可提交一次，请如实填写</p>
+                <div class="question">
+                    问题：是否对客户进行优先的分类？
+                    <i>4/4</i>
+                </div>
+                <button data-val="5">是</button>
+                <button data-val="1">否</button>
+            </div>
+        </div>
+        <div class="section">
+            <div class="win">
+                <h2>库存诊断（测试版）</h2>
+                <p>为达到更好效果，只可提交一次，请如实填写</p>
+                <div class="question">
+                    测试成绩公布：<span id="scope"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
