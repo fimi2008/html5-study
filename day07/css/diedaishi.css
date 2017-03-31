@@ -1,0 +1,39 @@
+/**
+ * Created by lionxxw on 2017/3/31.
+ */
+ul{
+    width: 80%;
+    height: 40px;
+    margin:100px auto;
+    list-style-type: none;
+}
+.left,.right{
+    width: 100px;
+    height: 40px;
+    background-color: green;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.center{
+    margin:0 110px;
+    height: 40px;
+    background-color: blue;
+}
+@media (max-width: 980px) {
+    .right{
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    .left{
+        display: none;
+    }
+    .center{
+        width: 100%;
+        margin: 0 ;
+    }
+}

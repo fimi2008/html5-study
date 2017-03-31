@@ -22,6 +22,7 @@
         $(function(){
             $('#main').fullpage();
             var $scope = $('#scope');
+            $.fn.fullpage.setAllowScrolling(false);
 
             $('button').click(function () {
                 var v = $(this).attr('data-val');

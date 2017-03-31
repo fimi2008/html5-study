@@ -6,8 +6,10 @@ html{
     margin: 0 auto;
 }
 body {
-    background: url("../images/bg.jpg") 0 0 no-repeat;
+    background: url("../images/bg.jpg") center no-repeat;
     background-size: cover;
+    min-height: 568px;
+    min-width: 320px;
 }
 .test_info{
     width: 30%;
