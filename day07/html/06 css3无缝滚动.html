@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3无缝滚动</title>
+    <style>
+        div,ul,li{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+        .box{
+            width: 600px;
+            height: 200px;
+            border: 1px solid #000;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        ul{
+            width: 1800px;
+            height: 200px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            /*
+            n	定义动画播放次数的数值。
+            infinite	规定动画应该无限次播放。
+            */
+            animation: doit 5s linear infinite;
+        }
+        .box:hover ul{
+            animation-play-state: paused;
+        }
+        @keyframes doit {
+            0%{
+                left: 0;
+            }
+            100%{
+                left: -1200px;
+            }
+        }
+        li{
+            width: 300px;
+            height: 200px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><img src="../images/01.jpg"  height="200" width="300" alt=""></li>
+            <li><img src="../images/02.jpg"  height="200" width="300" alt=""></li>
+            <li><img src="../images/03.jpg"  height="200" width="300" alt=""></li>
+            <li><img src="../images/04.jpg"  height="200" width="300" alt=""></li>
+            <li><img src="../images/01.jpg"  height="200" width="300" alt=""></li>
+            <li><img src="../images/02.jpg"  height="200" width="300" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
