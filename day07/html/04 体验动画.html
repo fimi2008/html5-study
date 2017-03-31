@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>体验动画</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            left: 0;
+            /*
+            linear	动画从头到尾的速度是相同的。
+            ease	默认。动画以低速开始，然后加快，在结束前变慢。
+            ease-in	动画以低速开始。
+            ease-out	动画以低速结束。
+            ease-in-out	动画以低速开始和结束。
+            cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中自己的值。可能的值是从 0 到 1 的数值。
+            */
+            animation: doit 2s ease-in-out;
+        }
+
+        @keyframes doit {
+            0%{
+                left:0;
+                transform: rotate(0deg);
+            }
+            50%{
+                top:20%;
+                left:50%;
+                width: 400px;
+                height: 400px;
+                transform: rotate(720deg);
+            }
+            100%{
+                right: 0;
+                transform: rotate(-720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
