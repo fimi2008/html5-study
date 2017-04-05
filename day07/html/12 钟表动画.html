@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>钟表动画</title>
+    <script type="text/javascript">
+        window.onload = function(){
+            var Ohours = document.getElementById('hour');
+            var Ominute = document.getElementById('minute');
+            var Osecond = document.getElementById('second');
+            getRotateValue();
+            function getRotateValue(){
+                // 声明一个时间对象
+                var date = new Date();
+                /*alert(date)*/
+                // 获取当前时间的（时）
+                var hours = date.getHours();
+                var minute = date.getMinutes();
+                var second = date.getSeconds();
+                /*alert(hours)*/
+                if(hours > 12) hours = hours - 12;
+                Ohours.style.webkitTransform = 'translate(-50%,-100%) rotate('+hours*30+'deg)';
+                Ominute.style.webkitTransform = 'translate(-50%,-100%) rotate('+minute*6+'deg)';
+                Osecond.style.webkitTransform = 'translate(-50%,-100%) rotate('+second*6+'deg)';
+
+            }
+            setInterval(getRotateValue, 1000)
+        }
+    </script>
+    <style>
+        .clock{
+            width: 300px;
+            height: 300px;
+            border: 5px solid #000;
+            border-radius: 50%;
+            margin: 100px auto;
+            position: relative;
+        }
+        .hour,.minute,.second{
+            width:5px;
+            height:80px;
+            background-color: black;
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform:translate(-50%,-100%);
+            border-radius:5px;
+            transform-origin: bottom;
+        }
+        .minute{
+            width:4px;
+            height:100px;
+        }
+        .second{
+            width:4px;
+            height:130px;
+            background-color: red;;
+        }
+        @keyframes go {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        .ball{
+            width: 5px;
+            height: 5px;
+            display: block;
+            border-radius: 50%;
+            background-color: skyblue;
+            top: -5px;
+            left: 50%;
+            position: absolute;
+            transform-origin: 0 155px;
+            animation: go 60s linear infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div id="second" class="second"></div>
+        <div id="minute" class="minute"></div>
+        <div id="hour" class="hour"></div>
+        <i class="ball"></i>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小手机-帧动画</title>
+    <style>
+        .box{
+            width:80px;
+            height:80px;
+            border: 1px solid #000;
+            margin:100px auto;
+            background: url("../images/tv_animate.png") 0 0 no-repeat;
+            /*
+             steps（帧数）
+                其实就是让动画分成多少步去执行，steps（）里面的数值是总画面数 - 1 ，在制作精灵图的时候每个画面的宽度尽量一致，并且建议在一行里面摆放
+            */
+            animation: go 1s steps(15) infinite alternate;
+        }
+        @keyframes go {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: -1200px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

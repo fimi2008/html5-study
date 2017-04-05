@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小鸟飞行</title>
+    <style>
+        .box{
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            left:0;
+            top: 100px;
+            background: url("../images/bird.fw.png") 0 0 no-repeat;
+            animation: go .5s steps(7) infinite,go2 5s linear infinite;;
+        }
+        @keyframes go {
+            0%{
+                background-position: 0 0;
+            }
+            100%{
+                background-position: -1050px 0;
+            }
+        }
+        @keyframes go2{
+            0%{
+                left:0;
+                top: 100px;
+            }
+            100%{
+                left:1200px;
+                top:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
