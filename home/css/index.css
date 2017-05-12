@@ -1,0 +1,69 @@
+/* 公共部分 */
+.transitionALL{
+	transition: all 1s;
+}
+.section{
+	 overflow: hidden;
+ }
+.w1200{
+	width:1200px;
+	margin: 0 auto;
+	height: 100%;
+	position: relative;
+}
+#menu .active a {
+	opacity: .65;
+}
+body{background-color: #f2f2f2;}
+.swiper-slide img{
+	height: 650px;
+}
+/* 公共部分 */
+/*头部导航开始*/
+.header{
+	width:100%;
+	height:60px;
+	position: fixed;
+	left: 0;
+	top:0;
+	background: rgba(0,0,0,0.8);
+	z-index: 100;
+}
+.inHeader{
+	width:960px;
+	height:60px;
+	margin: 0 auto;
+}
+.inHeader h1{
+	width:155px;
+	height: 60px;
+	text-indent: -9999px;
+	float: left;
+	margin-right: 17px;
+	cursor: pointer;
+}
+.headerNav{
+	float: left;
+	height:60px;
+
+}
+.headerNav li{
+	float: left;
+	height: 100%;
+	font-size: 14px;
+}
+.headerNav li a{
+	padding:0 20px;
+	color: #fff;
+	line-height: 60px;
+	display:inline-block;
+}
+.headerNav li a:hover{
+	opacity: .65;
+	text-decoration: none;
+}
+.headerNav li .current,.headerNav li .clicked{
+	opacity: .65;
+}
+
+/*头部导航结束*/

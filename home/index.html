@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/jquery.fullPage.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <title>Lionxxw小站</title>
+</head>
+<body>
+<!-- 头部导航开始 -->
+<div class="header" id="menu">
+    <div class="inHeader">
+        <h1><a href="javascript:;">Lionxxw小站</a></h1>
+        <ul class="headerNav"  >
+            <li data-menuanchor="page1"><a href="#page1">首页</a></li>
+            <li data-menuanchor="page2"><a href="#page2">gitHub</a></li>
+            <li data-menuanchor="page3"><a href="#page3">在线作品</a></li>
+            <li data-menuanchor="page4"><a href="#page4">联系方式</a></li>
+            <li data-menuanchor="page5"><a href="#page5">友情链接</a></li>
+        </ul>
+    </div>
+</div>
+<!-- 头部导航结束 -->
+<div id="main">
+    <div class="section">
+        <!-- Swiper start -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="images/banner2.jpg" alt="">
+                    </a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="javascript:;">
+                        <img src="images/banner3.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+        <!-- Swiper JS -->
+        <script src="js/swiper.min.js"></script>
+
+        <!-- Initialize Swiper -->
+        <script>
+            var swiper = new Swiper('.swiper-container',{
+                pagination : '.swiper-pagination',
+                paginationClickable: true,
+                loop: true
+            });
+        </script>
+        <!-- Swiper end-->
+    </div>
+    <div class="section">
+        <div class="w1200">
+            <div class="left">
+                <img height="230" src="https://avatars2.githubusercontent.com/u/15138577?v=3&s=460" alt="">
+                <div>
+                    <p>Lionxxw</p>
+                    <p>fimi2008</p>
+                    <p>程序猿一枚</p>
+                </div>
+                <ul>
+                    <li><path fill-rule="evenodd" d="M0 4v8c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1zm13 0L7 9 1 4h12zM1 5.5l4 3-4 3v-6zM2 12l3.5-3L7 10.5 8.5 9l3.5 3H2zm11-.5l-4-3 4-3v6z"></path><a href="mailto:vonshine15@163.com">vonshine15@163.com</a></li>
+                </ul>
+            </div>
+            <div class="right">
+                
+            </div>
+        </div>
+    </div>
+    <div class="section">
+        <h1>第三屏</h1>
+    </div>
+    <div class="section">
+        <h1>第四屏</h1>
+    </div>
+    <div class="section">
+        <h1>第五屏</h1>
+    </div>
+</div>
+</body>
+</html>
