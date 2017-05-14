@@ -21,7 +21,7 @@
             <li data-menuanchor="page1"><a href="#page1">首页</a></li>
             <li data-menuanchor="page2"><a href="#page2">gitHub</a></li>
             <li data-menuanchor="page3"><a href="#page3">在线作品</a></li>
-            <li data-menuanchor="page4"><a href="#page4">联系方式</a></li>
+            <li data-menuanchor="page4"><a href="#page4">轻松一刻</a></li>
             <li data-menuanchor="page5"><a href="#page5">友情链接</a></li>
         </ul>
     </div>
@@ -34,15 +34,17 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <a href="javascript:;">
-                        <img src="images/banner2.jpg" alt="">
+                        <img src="images/banner2.jpg" alt="Lionxxw小站">
                     </a>
                 </div>
                 <div class="swiper-slide">
                     <a href="javascript:;">
-                        <img src="images/banner3.jpg" alt="">
+                        <img src="images/banner3.jpg" alt="Lionxxw小站">
                     </a>
                 </div>
             </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
         </div>
@@ -54,38 +56,104 @@
             var swiper = new Swiper('.swiper-container',{
                 pagination : '.swiper-pagination',
                 paginationClickable: true,
-                loop: true
+                loop: true,
+                prevButton:'.swiper-button-prev',
+                nextButton:'.swiper-button-next',
+                autoplay:3000
             });
         </script>
         <!-- Swiper end-->
     </div>
-    <div class="section">
-        <div class="w1200">
-            <div class="left">
-                <img height="230" src="https://avatars2.githubusercontent.com/u/15138577?v=3&s=460" alt="">
-                <div>
+    <div class="section bg_write">
+        <div class="w1200 pt50">
+            <div class="left git_user transitionALL">
+                <a href="https://github.com/fimi2008" target="_blank">
+                    <img class="headerImg transitionALL" height="250" src="https://avatars2.githubusercontent.com/u/15138577?v=3&s=460" alt="">
+                </a>
+                <div class="user_info">
                     <p>Lionxxw</p>
                     <p>fimi2008</p>
-                    <p>程序猿一枚</p>
+                    <p class="desc">程序猿一枚</p>
                 </div>
-                <ul>
+                <ul class="contact_details">
                     <li><i class="iconfont icon-mail"></i><a href="mailto:vonshine15@163.com">vonshine15@163.com</a></li>
                 </ul>
             </div>
-            <div class="right">
-                
+            <div class="right git_info transitionALL">
+                <img class="transitionALL" src="images/github_img.jpg" height="250" alt="">
+                <img class="transitionALL" class="git_his" src="images/git_his.png" alt="">
             </div>
         </div>
     </div>
     <div class="section">
-        <h1>第三屏</h1>
+        <ul class="w1200 works_show">
+            <li>
+                <img src="images/miaosha_img.png" alt="Lionxxw小站">
+                <p><a href="http://lionxxw.top:8080/seckill/list" target="_blank">简易版秒杀系统</a></p>
+            </li>
+            <li>
+                <img src="images/product_test.png" alt="Lionxxw小站">
+                <p><a href="http://lionxxw.top/product/html/index.html" target="_blank">测试报告（demo）</a></p>
+            </li>
+            <li>
+                <img src="images/clock_img.png" alt="Lionxxw小站">
+                <p><a href="http://lionxxw.top/clock.html" target="_blank">实时时钟</a></p>
+            </li>
+            <li>
+                <img src="images/about_nginx.png" alt="Lionxxw小站">
+                <p><a href="http://lionxxw.top/about_nginx.html" target="_blank">关于nginx</a></p>
+            </li>
+        </ul>
+    </div>
+    <div class="section bg_write">
+        <div class="w1200 joy_time">
+            <img src="images/joy.jpg" alt="Lionxxw小站">
+            <img src="images/xiao.gif" alt="Lionxxw小站">
+        </div>
     </div>
     <div class="section">
-        <h1>第四屏</h1>
-    </div>
-    <div class="section">
-        <h1>第五屏</h1>
+        <div class="w1200 links_friendly">
+            <ul class="clearfix">
+                <li>
+                    <a href="https://github.com/" class="github_logo" target="_blank">gitHub</a>
+                    <span>gitHub</span>
+                </li>
+                <li>
+                    <a href="http://www.oschina.net/" class="oschina_logo" target="_blank">osChina</a>
+                    <span>开源中国</span>
+                </li>
+                <li>
+                    <a href="http://www.imooc.com/" class="imooc_logo" target="_blank">imooc</a>
+                    <span>慕课网</span>
+                </li>
+                <li>
+                    <a href="http://www.csdn.net/" class="csdn_logo" target="_blank">csdn</a>
+                    <span>CSDN</span>
+                </li>
+                <li>
+                    <a href="http://www.itcast.cn/" class="itcast_logo" target="_blank">itcast</a>
+                    <span>传智播客</span>
+                </li>
+                <li>
+                    <a href="http://www.runoob.com/" class="runoob_logo" target="_blank">runoob</a>
+                    <span>菜鸟教程</span>
+                </li>
+                <li>
+                    <a href="http://www.w3school.com.cn/" class="w3shool_logo" target="_blank">w3shool_logo</a>
+                    <span>W3shool</span>
+                </li>
+            </ul>
+        </div>
+        <footer>
+            <p>
+                Copyright©2017-2018 lionxxw.top All Rights Reserved Lionxxw版权所有 | 皖ICP备17006665号-1 | Lionxxw小站 皖ICP备17006665号-1
+            </p>
+        </footer>
     </div>
 </div>
+<div class="qq_contact">
+    <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=574693894&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:574693894:53" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdPic":"","bdStyle":"0","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 </body>
 </html>

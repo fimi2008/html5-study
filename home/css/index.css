@@ -1,69 +1,316 @@
-/* 公共部分 */
-.transitionALL{
-	transition: all 1s;
+/* 公共部分 start*/
+.transitionALL {
+    transition: all 1s;
 }
-.section{
-	 overflow: hidden;
- }
-.w1200{
-	width:1200px;
-	margin: 0 auto;
-	height: 100%;
-	position: relative;
+
+.section {
+    overflow: hidden;
 }
+
+.w1200 {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    position: relative;
+}
+
+.w400 {
+    width: 400px;
+}
+
+.w800 {
+    width: 800px;
+}
+
 #menu .active a {
-	opacity: .65;
+    opacity: .65;
 }
-body{background-color: #f2f2f2;}
-.swiper-slide img{
-	height: 650px;
+
+body {
+    font-size: 14px;
+    background-color: #f2f2f2;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 }
-/* 公共部分 */
+
+a {
+    color: #0366d6
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 650px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.pt50 {
+    padding-top: 50px;
+}
+
+.bg_write {
+    background: #ffffff;
+}
+
+.bg_dfddd5 {
+    background: #dfddd5;
+}
+
+.qq_contact {
+    position: fixed;
+    right: 0;
+    bottom: 20px;
+}
+
+/* 公共部分 end*/
 /*头部导航开始*/
-.header{
-	width:100%;
-	height:60px;
-	position: fixed;
-	left: 0;
-	top:0;
-	background: rgba(0,0,0,0.8);
-	z-index: 100;
+.header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
 }
-.inHeader{
-	width:960px;
-	height:60px;
-	margin: 0 auto;
+
+.inHeader {
+    width: 960px;
+    height: 60px;
+    margin: 0 auto;
 }
-.inHeader h1{
-	width:155px;
-	height: 60px;
-	text-indent: -9999px;
-	float: left;
-	margin-right: 17px;
-	cursor: pointer;
+
+.inHeader h1 {
+    width: 155px;
+    height: 60px;
+    text-indent: -9999px;
+    float: left;
+    margin-right: 17px;
+    cursor: pointer;
 }
-.headerNav{
-	float: left;
-	height:60px;
+
+.headerNav {
+    float: left;
+    height: 60px;
 
 }
-.headerNav li{
-	float: left;
-	height: 100%;
-	font-size: 14px;
+
+.headerNav li {
+    float: left;
+    height: 100%;
+    font-size: 14px;
 }
-.headerNav li a{
-	padding:0 20px;
-	color: #fff;
-	line-height: 60px;
-	display:inline-block;
+
+.headerNav li a {
+    padding: 0 20px;
+    color: #fff;
+    line-height: 60px;
+    display: inline-block;
 }
-.headerNav li a:hover{
-	opacity: .65;
-	text-decoration: none;
+
+.headerNav li a:hover {
+    opacity: .65;
+    text-decoration: none;
 }
-.headerNav li .current,.headerNav li .clicked{
-	opacity: .65;
+
+.headerNav li .current, .headerNav li .clicked {
+    opacity: .65;
 }
 
 /*头部导航结束*/
+
+/*第二屏样式 start*/
+.headerImg {
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.comeout .headerImg {
+    opacity: 1;
+}
+
+.user_info {
+    padding-top: 15px;
+    font-size: 20px;
+    line-height: 24px;
+    color: #666;
+}
+
+.user_info p:nth-child(1) {
+    font-size: 26px;
+    line-height: 30px;
+    color: #000000;
+}
+
+.user_info .desc {
+    font-size: 14px;
+    color: #6a737d;
+    line-height: 1.5;
+    padding: 10px 0;
+}
+
+.contact_details {
+    padding-top: 16px;
+    border-top: 1px #e1e4e8 solid;
+}
+
+.contact_details a {
+    margin-left: 5px;
+}
+
+.git_his {
+    margin-top: 10px;
+}
+
+.git_user {
+    position: absolute;
+    left: -30px;
+    top: 50px;
+}
+
+.git_info {
+    position: absolute;
+    right: -30px;
+    top: 50px;
+}
+
+.git_info img {
+    display: block;
+    opacity: 0;
+}
+
+.comeout .git_user {
+    left: 0;
+}
+
+.comeout .git_info {
+    right: 30px;
+}
+
+.comeout .git_info img {
+    opacity: 1;
+}
+
+/*第二屏样式 end*/
+/*第三屏样式 start*/
+.works_show li {
+    float: left;
+    margin: 10px;
+    opacity: 0;
+    transition: all 1.5s;
+}
+
+.comeout .works_show li {
+    transform: rotate(360deg);
+    opacity: 1;
+}
+
+.works_show li img {
+    height: 270px;
+}
+
+.works_show li p {
+    text-align: center;
+}
+
+/*第三屏样式 end*/
+/*第四屏样式 start*/
+.joy_time img {
+    position: absolute;
+}
+
+.joy_time img:nth-child(1) {
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.comeout .joy_time img:nth-child(1) {
+    opacity: 1;
+}
+
+.joy_time img:nth-child(2) {
+    height: 400px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.comeout .joy_time img:nth-child(2) {
+    opacity: 1;
+}
+
+/*第四屏样式 end*/
+/*第五屏样式 start*/
+.links_friendly{
+    margin-top: 50px;
+    height: auto;
+}
+.links_friendly li{
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    padding: 5px;
+}
+.links_friendly span{
+    display: block;
+    text-align: center;
+}
+.github_logo,.csdn_logo,.imooc_logo,.itcast_logo,.oschina_logo,.runoob_logo,.w3shool_logo{
+    display: block;
+    height: 120px;
+    text-indent: -99999px;
+    background-size:100%;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+}
+.links_friendly li a{
+    transition: all 1s;
+    opacity: 0;
+}
+.comeout .links_friendly li a{
+    opacity: 1;
+}
+.github_logo{
+    background-image: url("../images/logo/github_logo.jpg");
+}
+.csdn_logo{
+    background-image: url("../images/logo/csdn_logo.png");
+}
+.imooc_logo{
+    background-image: url("../images/logo/imooc_logo.png")
+}
+.itcast_logo{
+    background-image: url("../images/logo/itcast_logo.png");
+}
+.oschina_logo{
+    background-image: url("../images/logo/oschina_logo.jpg");
+}
+.runoob_logo{
+    background-image: url("../images/logo/runoob_logo.png");
+}
+.w3shool_logo{
+    background-image: url("../images/logo/w3shool_logo.png");
+}
+/*第五屏样式 end*/
+footer{
+    display: block;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
