@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/pintuer.css">
+    <title>拼图前端框架跨屏响应式模板</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/pintuer.js"></script>
+</head>
+<body>
+
+<div class="container-layout padding-big-top padding-big-bottom">
+    <div class="line">
+        <div class="xl12 xs2 xm2 xb1">
+            <button class="button icon-navicon float-right" data-target="#header-demo2">
+            </button>
+            <img src="/images/40.png" />
+        </div>
+        <div class=" xl12 xs10 xm10 xb11 padding-top nav-navicon" id="header-demo2">
+            <div class="xs8 xm8 xb6">
+                <ul class="nav nav-menu nav-inline">
+                    <li><a href="#">首页</a> </li>
+                    <li><a href="#">CSS</a> </li>
+                    <li class="active"><a href="#">元件<span class="arrow"></span></a>
+                        <ul class="drop-menu">
+                            <li><a href="#">概述</a> </li>
+                            <li><a href="#">网格系统<span class="arrow"></span></a>
+                                <ul>
+                                    <li><a href="#">响应式布局</a> </li>
+                                    <li><a href="#">非响应式布局</a> </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">图标</a> </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">更多<span class="arrow"></span></a>
+                        <ul class="drop-menu">
+                            <li><a href="#">组件</a> </li>
+                            <li><a href="#">模块<span class="arrow"></span></a>
+                                <ul>
+                                    <li><a href="#">头部</a> </li>
+                                    <li><a href="#">导航</a> </li>
+                                    <li><a href="#">底部</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="xs4 xm4 xb3">
+                <form>
+                    <div class="input-group padding-little-top">
+                        <input type="text" class="input border-main" name="keywords" size="30" placeholder="关键词" />
+                        <span class="addbtn">
+                        <button type="button" class="button bg-main">
+                            搜!</button></span>
+                    </div>
+                </form>
+            </div>
+            <div class="hidden-s hidden-m xb2 xb1-move">
+                <div class="xl6 xb12 text-red">
+                    400-123-4567</div>
+                <div class="xl6 xb12 text-small">
+                    <a href="#" class="win-homepage">设为首页</a> | <a href="#" class="win-favorite">加入收藏</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+</body>
+</html>
